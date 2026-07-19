@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub 每周热门 · Weekly Trending Repos</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>🔥 GitHub 每周热门</h1>
+      <p class="subtitle">AI 时代最受欢迎的开源项目 · 每周一自动更新</p>
+      <div class="header-meta">
+        <span id="updateTime">加载中...</span>
+        <span id="repoCount"></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <nav class="category-nav" id="categoryNav">
+      <!-- populated by JS -->
+    </nav>
+
+    <div class="toolbar">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="搜索项目名、描述..."
+        class="search-input"
+      />
+      <select id="sortSelect" class="sort-select">
+        <option value="stars">🌟 按 Star 数</option>
+        <option value="name">🔤 按名称</option>
+        <option value="forks">🍴 按 Fork 数</option>
+      </select>
+    </div>
+
+    <div class="repo-grid" id="repoGrid">
+      <div class="loading">⏳ 正在加载数据...</div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>
+        Data from
+        <a href="https://github.com" target="_blank">GitHub API</a> ·
+        Auto-refreshed every Monday
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
